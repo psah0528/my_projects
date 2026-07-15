@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Root Menu -->
+    <menuitem
+        id="menu_my_projects_root"
+        name="My Projects"
+        sequence="1"
+    />
+
+    <!-- ORM Parent Menu -->
+    <menuitem
+        id="menu_my_projects_orm_root"
+        name="ORM"
+        parent="menu_my_projects_root"
+        sequence="1"
+    />
+
+    <!-- Employees -->
+    <menuitem
+        id="menu_my_projects_employee"
+        name="Employees"
+        parent="menu_my_projects_orm_root"
+        action="action_orm_employee"
+        sequence="1"
+    />
+
+    <!-- Departments -->
+    <menuitem
+        id="menu_my_projects_department"
+        name="Departments"
+        parent="menu_my_projects_orm_root"
+        action="action_orm_department"
+        sequence="2"
+    />
+
+    <!-- Skills -->
+
+    <menuitem
+    id="menu_my_projects_skill"
+    name="Skills"
+    parent="menu_my_projects_orm_root"
+    action="action_orm_skill"
+    sequence="3"
+/>
+
+
+
+
+
+
+</odoo>

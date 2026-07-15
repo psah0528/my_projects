@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- List View -->
+    <record id="view_orm_employee_list" model="ir.ui.view">
+        <field name="name">orm.employee.list</field>
+        <field name="model">orm.employee</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="phone"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_orm_employee_form" model="ir.ui.view">
+        <field name="name">orm.employee.form</field>
+        <field name="model">orm.employee</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <notebook>
+
+                        <!-- General Information -->
+
+                        <page string="General Information">
+
+                            <group>
+                                <group>
+                                    <field name="name"/>
+                                    <field name="employee_code" readonly="1"/>
+                                    <field name="email"/>
+
+                                    <button
+                                name="action_search_employees"
+                                string="Search Employees"
+                                type="object"
+                                class="btn-primary"/>
+
+                                <button
+                                 name="action_browse_employee"
+                                 string="Browse Employee"
+                                 type="object"
+                                 class="btn-secondary"/>
+
+                                <button
+                                name="copy"
+                                string="Duplicate Employee"
+                                type="object"
+                                class="btn-info"/>
+
+                                </group>
+
+                                <group>
+                                    <field name="phone"/>
+                                    <field name="mobile"/>
+                                    <field name="department_id"/>
+                                </group>
+                                
+                            </group>
+
+                        </page>
+
+                        <!-- Basic Fields -->
+
+                        <page string="Basic Fields">
+
+                            <group>
+
+                                <field name="short_bio"/>
+
+                                <field name="address"/>
+
+                                <field name="description"/>
+
+                            </group>
+
+                        </page>
+
+<!-- Numeric Fields -->
+
+<page string="Numeric Fields">
+
+    <group>
+
+        <group>
+
+            <field name="age"/>
+
+            <field name="experience"/>
+
+        </group>
+
+        <group>
+
+            <field name="currency_id"/>
+
+            <field name="salary"/>
+
+        </group>
+
+    </group>
+
+</page>
+
+
+<!-- Date Fields -->
+
+<page string="Date Fields">
+
+    <group>
+
+        <group>
+
+            <field name="date_of_birth"/>
+
+        </group>
+
+        <group>
+
+            <field name="joining_datetime"/>
+
+        </group>
+
+    </group>
+
+</page>
+
+
+<!-- Selection Fields -->
+
+<page string="Selection Fields">
+
+    <group>
+
+        <group>
+
+            <field name="gender"/>
+
+        </group>
+
+        <group>
+
+            <field name="status"/>
+
+        </group>
+
+    </group>
+
+</page>
+
+
+<!-- Boolean Fields -->
+
+<page string="Boolean Fields">
+
+    <group>
+
+        <group>
+
+            <field name="active_employee"/>
+
+        </group>
+
+        <group>
+
+            <field name="is_manager"/>
+
+        </group>
+
+    </group>
+
+</page>
+
+
+<!-- Binary Fields -->
+
+<page string="Binary Fields">
+
+    <group>
+
+        <group>
+
+            <field name="photo" widget="image"/>
+
+        </group>
+
+        <group>
+
+            <field name="resume" filename="resume_filename"/>
+
+        </group>
+
+    </group>
+
+</page>
+
+<!-- Many2many -->
+
+
+<page string="Many2many">
+
+    <group>
+
+        <field
+            name="skill_ids"
+            widget="many2many_tags"
+        />
+
+    </group>
+
+</page>
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_orm_employee" model="ir.actions.act_window">
+        <field name="name">ORM</field>
+        <field name="res_model">orm.employee</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

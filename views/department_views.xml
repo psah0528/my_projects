@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- List View -->
+
+    <record id="view_orm_department_list" model="ir.ui.view">
+        <field name="name">orm.department.list</field>
+        <field name="model">orm.department</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+
+    <record id="view_orm_department_form" model="ir.ui.view">
+        <field name="name">orm.department.form</field>
+        <field name="model">orm.department</field>
+        <field name="arch" type="xml">
+
+            <form>
+
+                <sheet>
+
+                    <group>
+                        <field name="name"/>
+                    </group>
+
+                    <notebook>
+
+                        <page string="Employees">
+
+                            <field name="employee_ids" readonly="1">
+
+                                <list>
+
+                                    <field name="name"/>
+
+                                    <field name="email"/>
+
+                                    <field name="phone"/>
+
+                                </list>
+
+                            </field>
+
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+
+            </form>
+
+        </field>
+    </record>
+
+    <!-- Action -->
+
+    <record id="action_orm_department" model="ir.actions.act_window">
+        <field name="name">Departments</field>
+        <field name="res_model">orm.department</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>
