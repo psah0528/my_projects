@@ -2,6 +2,7 @@ from odoo import api, fields, models
 from odoo.exceptions import UserError
 
 
+
 class ORMEmployee(models.Model):
     _name = "orm.employee"
     _description = "ORM Employee"
@@ -181,17 +182,17 @@ class ORMEmployee(models.Model):
 
         return records
     
- # search btn  METHODS
+#  # search btn  METHODS
     
-    def action_search_employees(self):
-        employees = self.search([
-        ("active_employee", "=", True)
-    ])
-        print("========== SEARCH RESULT ==========")
-        for emp in employees:
-             print(emp.name)
+#     def action_search_employees(self):
+#         employees = self.search([
+#         ("active_employee", "=", True)
+#     ])
+#         print("========== SEARCH RESULT ==========")
+#         for emp in employees:
+#              print(emp.name)
 
-    print("===================================")
+#     print("===================================")
 
     
  # WRITE  METHODS
@@ -269,10 +270,17 @@ Employee Code : {employee.employee_code}
      return f"EMP-{number + 1:04d}"
 
 
+  
 
+# UNLINK METHOD 
+    def unlink(self):
 
+     for rec in self:
+        if rec.department_id:
+            raise UserError(
+                "Employee having Department cannot be deleted."
+            )
 
+     return super().unlink()
     
-    
-
-    
+# SEARCH METHOD 
