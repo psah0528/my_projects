@@ -2,3 +2,5 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_orm_employee,orm.employee,model_orm_employee,,1,1,1,1
 access_orm_department,orm.department,model_orm_department,,1,1,1,1
 access_orm_skill_user,access.orm.skill.user,model_orm_skill,base.group_user,1,1,1,1
+
+access_xml_list_view,access.xml.list.view,model_xml_list_view,,1,1,1,1

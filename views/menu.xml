@@ -45,6 +45,53 @@
 />
 
 
+<!-- XML/VIEWS =========================================================================================  -->
+
+
+<!-- ===================================================== -->
+<!-- XML Views -->
+<!-- ===================================================== -->
+
+<menuitem
+    id="menu_my_projects_xml_root"
+    name="XML Views"
+    parent="menu_my_projects_root"
+    sequence="2"
+/>
+
+<!-- Step 1 -->
+<menuitem
+    id="menu_xml_step1"
+    name="Step 1 - List View"
+    parent="menu_my_projects_xml_root"
+    action="action_xml_list_view"
+    sequence="1"
+/>
+
+<!-- Remaining Steps -->
+<menuitem id="menu_xml_step2"  name="Step 2 - Form View"        parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="2"/>
+<menuitem id="menu_xml_step3"  name="Step 3 - Search View"      parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="3"/>
+<menuitem id="menu_xml_step4"  name="Step 4 - Kanban View"      parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="4"/>
+<menuitem id="menu_xml_step5"  name="Step 5 - Calendar View"    parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="5"/>
+<menuitem id="menu_xml_step6"  name="Step 6 - Activity View"    parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="6"/>
+<menuitem id="menu_xml_step7"  name="Step 7 - Graph View"       parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="7"/>
+<menuitem id="menu_xml_step8"  name="Step 8 - Pivot View"       parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="8"/>
+<menuitem id="menu_xml_step9"  name="Step 9 - Search Panel"     parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="9"/>
+<menuitem id="menu_xml_step10" name="Step 10 - Widgets"         parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="10"/>
+<menuitem id="menu_xml_step11" name="Step 11 - Header"          parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="11"/>
+<menuitem id="menu_xml_step12" name="Step 12 - Statusbar"       parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="12"/>
+<menuitem id="menu_xml_step13" name="Step 13 - Buttons"         parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="13"/>
+<menuitem id="menu_xml_step14" name="Step 14 - Notebook"        parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="14"/>
+<menuitem id="menu_xml_step15" name="Step 15 - Groups"          parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="15"/>
+<menuitem id="menu_xml_step16" name="Step 16 - Domain"          parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="16"/>
+<menuitem id="menu_xml_step17" name="Step 17 - Context"         parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="17"/>
+<menuitem id="menu_xml_step18" name="Step 18 - Invisible"       parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="18"/>
+<menuitem id="menu_xml_step19" name="Step 19 - Readonly"        parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="19"/>
+<menuitem id="menu_xml_step20" name="Step 20 - Required"        parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="20"/>
+<menuitem id="menu_xml_step21" name="Step 21 - Decorations"     parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="21"/>
+<menuitem id="menu_xml_step22" name="Step 22 - XML Inheritance" parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="22"/>
+
+
 
 
 

@@ -69,7 +69,20 @@
                                 name="action_active_employees"
                                 string="Active Employees"
                                 type="object"
-                                 class="btn-success"/>                             
+                                 class="btn-success"/>  
+
+
+                                 <button
+                                     name="action_department_summary"
+                                     string="Department Summary"
+                                     type="object"
+                                     class="btn-primary"/>
+
+                                 <button
+                                     name="action_total_departments"
+                                     string="Total Departments"
+                                     type="object"
+                                     class="btn-secondary"/>                           
 
                             
 

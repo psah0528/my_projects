@@ -325,3 +325,51 @@ Employee Code : {employee.employee_code}
         raise UserError(
             f"Active Employees : {len(active_employees)}"
         )
+    
+
+    # ---------------------------------------------------------
+    # ORM Method : read_group()
+    # ---------------------------------------------------------
+
+    def action_department_summary(self):
+        self.ensure_one()
+
+        result = self.read_group(
+            domain=[],
+            fields=["department_id"],
+            groupby=["department_id"],
+        )
+
+        message = ""
+
+        for rec in result:
+            department = (
+                rec["department_id"][1]
+                if rec["department_id"]
+                else "No Department"
+            )
+
+            count = rec["department_id_count"]
+
+            message += f"{department} : {count}\n"
+
+        raise UserError(message or "No Data Found")
+
+
+    # ---------------------------------------------------------
+    # ORM Method : sudo()
+    # ---------------------------------------------------------
+
+    def action_total_departments(self):
+        self.ensure_one()
+
+        total = self.env["orm.department"].sudo().search_count([])
+
+        raise UserError(
+            f"Total Departments : {total}"
+        )
+    
+
+
+
+    

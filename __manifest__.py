@@ -17,6 +17,8 @@
 
     "views/orm_employee_views.xml",
 
+    "views/xml_list_view_views.xml",
+
     "views/department_views.xml",
 
     "views/skill_views.xml",
