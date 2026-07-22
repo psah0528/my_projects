@@ -53,6 +53,25 @@
                                 type="object"
                                 class="btn-info"/>
 
+                                <button
+                                name="action_employee_count"
+                                 string="Employee Count"
+                                 type="object"
+                                class="btn-warning"/>
+
+                                <button
+                                name="action_show_emails"
+                                string="Show Emails"
+                                type="object"
+                                class="btn-info"/>
+
+                                <button
+                                name="action_active_employees"
+                                string="Active Employees"
+                                type="object"
+                                 class="btn-success"/>                             
+
+                            
 
 
                                 </group>

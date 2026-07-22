@@ -270,8 +270,6 @@ Employee Code : {employee.employee_code}
      return f"EMP-{number + 1:04d}"
 
 
-  
-
 # UNLINK METHOD 
     def unlink(self):
 
@@ -283,4 +281,47 @@ Employee Code : {employee.employee_code}
 
      return super().unlink()
     
-# SEARCH METHOD 
+
+
+    # ---------------------------------------------------------
+    # ORM Method : search_count()
+    # ---------------------------------------------------------
+
+    def action_employee_count(self):
+        self.ensure_one()
+
+        total = self.search_count([])
+
+        raise UserError(
+            f"Total Employees : {total}"
+        )
+
+    # ---------------------------------------------------------
+    # ORM Method : mapped()
+    # ---------------------------------------------------------
+
+    def action_show_emails(self):
+        self.ensure_one()
+
+        emails = self.search([]).mapped("email")
+
+        message = "\n".join(filter(None, emails))
+
+        raise UserError(
+            message if message else "No Email Found"
+        )
+
+    # ---------------------------------------------------------
+    # ORM Method : filtered()
+    # ---------------------------------------------------------
+
+    def action_active_employees(self):
+        self.ensure_one()
+
+        active_employees = self.search([]).filtered(
+            lambda emp: emp.active_employee
+        )
+
+        raise UserError(
+            f"Active Employees : {len(active_employees)}"
+        )
