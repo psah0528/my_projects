@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- List View -->
+
+    <record id="view_xml_form_features_list" model="ir.ui.view">
+        <field name="name">xml.form.features.list</field>
+        <field name="model">xml.form.features</field>
+        <field name="arch" type="xml">
+
+            <list>
+
+                <field name="name"/>
+                <field name="department"/>
+                <field name="salary"/>
+                <field name="status"/>
+
+            </list>
+
+        </field>
+    </record>
+
+
+    <!-- Form View -->
+
+    <record id="view_xml_form_features_form" model="ir.ui.view">
+        <field name="name">xml.form.features.form</field>
+        <field name="model">xml.form.features</field>
+
+        <field name="arch" type="xml">
+
+            <form>
+
+                <!-- STEP 11 -->
+                <header>
+
+                    <!-- STEP 13 -->
+
+                    <button
+                        name="action_confirm"
+                        string="Confirm"
+                        type="object"
+                        class="btn-primary"
+                        invisible="status != 'draft'"
+                    />
+
+                    <button
+                        name="action_done"
+                        string="Done"
+                        type="object"
+                        class="btn-success"
+                        invisible="status != 'progress'"
+                    />
+
+                    <!-- STEP 12 -->
+
+                    <field
+                        name="status"
+                        widget="statusbar"
+                    />
+
+                </header>
+
+                <sheet>
+
+                    <group>
+
+                        <field name="name"/>
+
+                        <field name="department"/>
+
+                        <field name="salary"/>
+
+                        <field name="active"/>
+
+                        <field name="notes"/>
+
+                    </group>
+
+                </sheet>
+
+            </form>
+
+        </field>
+    </record>
+
+
+    <!-- Action -->
+
+    <record id="action_xml_form_features" model="ir.actions.act_window">
+
+        <field name="name">Step 11-13</field>
+
+        <field name="res_model">xml.form.features</field>
+
+        <field name="view_mode">list,form</field>
+
+    </record>
+
+</odoo>

@@ -68,19 +68,45 @@
     sequence="1"
 />
 
+<!--  11 , 12 , 13 -->
+
+<menuitem
+    id="menu_xml_step11"
+    name="Step 11 - Header"
+    parent="menu_my_projects_xml_root"
+    action="action_xml_form_features"
+    sequence="11"/>
+
+<menuitem
+    id="menu_xml_step12"
+    name="Step 12 - Statusbar"
+    parent="menu_my_projects_xml_root"
+    action="action_xml_form_features"
+    sequence="12"/>
+
+<menuitem
+    id="menu_xml_step13"
+    name="Step 13 - Buttons"
+    parent="menu_my_projects_xml_root"
+    action="action_xml_form_features"
+    sequence="13"/>
+
+
+
+
+
+
 <!-- Remaining Steps -->
-<menuitem id="menu_xml_step2"  name="Step 2 - Form View"        parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="2"/>
-<menuitem id="menu_xml_step3"  name="Step 3 - Search View"      parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="3"/>
-<menuitem id="menu_xml_step4"  name="Step 4 - Kanban View"      parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="4"/>
-<menuitem id="menu_xml_step5"  name="Step 5 - Calendar View"    parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="5"/>
-<menuitem id="menu_xml_step6"  name="Step 6 - Activity View"    parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="6"/>
-<menuitem id="menu_xml_step7"  name="Step 7 - Graph View"       parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="7"/>
-<menuitem id="menu_xml_step8"  name="Step 8 - Pivot View"       parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="8"/>
-<menuitem id="menu_xml_step9"  name="Step 9 - Search Panel"     parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="9"/>
-<menuitem id="menu_xml_step10" name="Step 10 - Widgets"         parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="10"/>
-<menuitem id="menu_xml_step11" name="Step 11 - Header"          parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="11"/>
-<menuitem id="menu_xml_step12" name="Step 12 - Statusbar"       parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="12"/>
-<menuitem id="menu_xml_step13" name="Step 13 - Buttons"         parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="13"/>
+<menuitem id="menu_xml_step2"  name="Step 2 - Form View"        parent="menu_my_projects_xml_root" action= "action_xml_form_view" sequence="2"/>
+<menuitem id="menu_xml_step3"  name="Step 3 - Search View"      parent="menu_my_projects_xml_root" action="action_xml_search_view" sequence="3"/>
+<menuitem id="menu_xml_step4"  name="Step 4 - Kanban View"      parent="menu_my_projects_xml_root" action="action_xml_kanban_view" sequence="4"/>
+<menuitem id="menu_xml_step5"  name="Step 5 - Calendar View"    parent="menu_my_projects_xml_root" action="action_xml_calendar_view" sequence="5"/>
+<menuitem id="menu_xml_step6"  name="Step 6 - Activity View"    parent="menu_my_projects_xml_root" action="action_xml_activity_view" sequence="6"/>
+<menuitem id="menu_xml_step7"  name="Step 7 - Graph View"       parent="menu_my_projects_xml_root" action="action_xml_graph_view" sequence="7"/>
+<menuitem id="menu_xml_step8"  name="Step 8 - Pivot View"       parent="menu_my_projects_xml_root" action="action_xml_pivot_view" sequence="8"/>
+<menuitem id="menu_xml_step9"  name="Step 9 - Search Panel"     parent="menu_my_projects_xml_root" action="action_xml_search_panel" sequence="9"/>
+<menuitem id="menu_xml_step10" name="Step 10 - Widgets"         parent="menu_my_projects_xml_root" action="action_xml_widgets" sequence="10"/>
+
 <menuitem id="menu_xml_step14" name="Step 14 - Notebook"        parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="14"/>
 <menuitem id="menu_xml_step15" name="Step 15 - Groups"          parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="15"/>
 <menuitem id="menu_xml_step16" name="Step 16 - Domain"          parent="menu_my_projects_xml_root" action="action_orm_employee" sequence="16"/>

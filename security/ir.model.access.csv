@@ -4,3 +4,14 @@ access_orm_department,orm.department,model_orm_department,,1,1,1,1
 access_orm_skill_user,access.orm.skill.user,model_orm_skill,base.group_user,1,1,1,1
 
 access_xml_list_view,access.xml.list.view,model_xml_list_view,,1,1,1,1
+
+access_xml_form_view,access.xml.form.view,model_xml_form_view,,1,1,1,1
+access_xml_search_view,access.xml.search.view,model_xml_search_view,,1,1,1,1
+access_xml_kanban_view,access.xml.kanban.view,model_xml_kanban_view,,1,1,1,1
+access_xml_calendar_view,access.xml.calendar.view,model_xml_calendar_view,,1,1,1,1
+access_xml_activity_view,access.xml.activity.view,model_xml_activity_view,,1,1,1,1
+access_xml_graph_view,access.xml.graph.view,model_xml_graph_view,,1,1,1,1
+access_xml_pivot_view,access.xml.pivot.view,model_xml_pivot_view,,1,1,1,1
+access_xml_search_panel,access.xml.search.panel,model_xml_search_panel,,1,1,1,1
+access_xml_widgets,access.xml.widgets,model_xml_widgets,,1,1,1,1
+access_xml_form_features,access.xml.form.features,model_xml_form_features,,1,1,1,1

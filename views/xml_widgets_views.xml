@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- =======================================================
+                        List View
+    ======================================================== -->
+
+    <record id="view_xml_widgets_list" model="ir.ui.view">
+        <field name="name">xml.widgets.list</field>
+        <field name="model">xml.widgets</field>
+        <field name="arch" type="xml">
+
+            <list string="Widgets Demo">
+
+                <field name="photo" widget="image"/>
+
+                <field name="name"/>
+
+                <field name="email"/>
+
+                <field name="phone"/>
+
+                <field name="salary"/>
+
+                <field name="progress" widget="progressbar"/>
+
+                <field name="active" widget="boolean_toggle"/>
+
+                <field name="status" widget="badge"/>
+
+                <field name="priority" widget="priority"/>
+
+            </list>
+
+        </field>
+    </record>
+
+
+    <!-- =======================================================
+                        Form View
+    ======================================================== -->
+
+    <record id="view_xml_widgets_form" model="ir.ui.view">
+        <field name="name">xml.widgets.form</field>
+        <field name="model">xml.widgets</field>
+
+        <field name="arch" type="xml">
+
+            <form string="Widgets Demo">
+
+                <sheet>
+
+                    <group>
+
+                        <group>
+
+                            <field name="photo" widget="image"/>
+
+                            <field name="name"/>
+
+                            <field name="email" widget="email"/>
+
+                            <field name="phone" widget="phone"/>
+
+                            <field name="website" widget="url"/>
+
+                        </group>
+
+                        <group>
+
+                            <field name="salary"/>
+
+                            <field name="progress" widget="progressbar"/>
+
+                            <field name="priority" widget="priority"/>
+
+                            <field name="active" widget="boolean_toggle"/>
+
+                            <field name="status" widget="badge"/>
+
+                        </group>
+
+                    </group>
+
+                </sheet>
+
+            </form>
+
+        </field>
+
+    </record>
+
+
+    <!-- =======================================================
+                        Action
+    ======================================================== -->
+
+    <record id="action_xml_widgets" model="ir.actions.act_window">
+
+        <field name="name">Step 10 - Widgets</field>
+
+        <field name="res_model">xml.widgets</field>
+
+        <field name="view_mode">list,form</field>
+
+    </record>
+
+</odoo>

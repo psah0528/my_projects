@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- ==========================
+            Graph View
+    =========================== -->
+
+    <record id="view_xml_graph_view_graph" model="ir.ui.view">
+        <field name="name">xml.graph.view.graph</field>
+        <field name="model">xml.graph.view</field>
+        <field name="arch" type="xml">
+
+            <graph string="Department Salary Analysis" type="bar">
+
+                <field name="department"/>
+
+                <field name="salary" type="measure"/>
+
+            </graph>
+
+        </field>
+    </record>
+
+
+    <!-- ==========================
+            List View
+    =========================== -->
+
+    <record id="view_xml_graph_view_list" model="ir.ui.view">
+        <field name="name">xml.graph.view.list</field>
+        <field name="model">xml.graph.view</field>
+
+        <field name="arch" type="xml">
+
+            <list>
+
+                <field name="department"/>
+
+                <field name="salary"/>
+
+                <field name="employee_count"/>
+
+            </list>
+
+        </field>
+    </record>
+
+
+    <!-- ==========================
+            Form View
+    =========================== -->
+
+    <record id="view_xml_graph_view_form" model="ir.ui.view">
+        <field name="name">xml.graph.view.form</field>
+        <field name="model">xml.graph.view</field>
+
+        <field name="arch" type="xml">
+
+            <form>
+
+                <sheet>
+
+                    <group>
+
+                        <field name="department"/>
+
+                        <field name="salary"/>
+
+                        <field name="employee_count"/>
+
+                    </group>
+
+                </sheet>
+
+            </form>
+
+        </field>
+    </record>
+
+
+    <!-- ==========================
+            Action
+    =========================== -->
+
+    <record id="action_xml_graph_view" model="ir.actions.act_window">
+
+        <field name="name">Step 7 - Graph View</field>
+
+        <field name="res_model">xml.graph.view</field>
+
+        <field name="view_mode">graph,list,form</field>
+
+    </record>
+
+</odoo>

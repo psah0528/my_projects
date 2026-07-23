@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- ==========================================
+                    Search View
+    =========================================== -->
+
+    <record id="view_xml_search_panel_search" model="ir.ui.view">
+        <field name="name">xml.search.panel.search</field>
+        <field name="model">xml.search.panel</field>
+
+        <field name="arch" type="xml">
+
+            <search>
+
+                <field name="name"/>
+
+                <field name="department"/>
+
+                <field name="status"/>
+
+                <filter
+                    name="active"
+                    string="Active"
+                    domain="[('active','=',True)]"/>
+
+                <group expand="0" string="Group By">
+
+                    <filter
+                        name="group_department"
+                        string="Department"
+                        context="{'group_by':'department'}"/>
+
+                    <filter
+                        name="group_status"
+                        string="Status"
+                        context="{'group_by':'status'}"/>
+
+                </group>
+
+                <searchpanel>
+
+                    <field name="department"/>
+
+                    <field name="status"/>
+
+                </searchpanel>
+
+            </search>
+
+        </field>
+    </record>
+
+
+    <!-- ==========================================
+                    List View
+    =========================================== -->
+
+    <record id="view_xml_search_panel_list" model="ir.ui.view">
+        <field name="name">xml.search.panel.list</field>
+        <field name="model">xml.search.panel</field>
+
+        <field name="arch" type="xml">
+
+            <list>
+
+                <field name="name"/>
+
+                <field name="department"/>
+
+                <field name="status"/>
+
+                <field name="salary"/>
+
+                <field name="active"/>
+
+            </list>
+
+        </field>
+    </record>
+
+
+    <!-- ==========================================
+                    Form View
+    =========================================== -->
+
+    <record id="view_xml_search_panel_form" model="ir.ui.view">
+        <field name="name">xml.search.panel.form</field>
+        <field name="model">xml.search.panel</field>
+
+        <field name="arch" type="xml">
+
+            <form>
+
+                <sheet>
+
+                    <group>
+
+                        <field name="name"/>
+
+                        <field name="department"/>
+
+                        <field name="status"/>
+
+                        <field name="salary"/>
+
+                        <field name="active"/>
+
+                    </group>
+
+                </sheet>
+
+            </form>
+
+        </field>
+    </record>
+
+
+    <!-- ==========================================
+                    Action
+    =========================================== -->
+
+    <record id="action_xml_search_panel" model="ir.actions.act_window">
+
+        <field name="name">Step 9 - Search Panel</field>
+
+        <field name="res_model">xml.search.panel</field>
+
+        <field name="view_mode">list,form</field>
+
+        <field name="search_view_id" ref="view_xml_search_panel_search"/>
+
+    </record>
+
+</odoo>
